@@ -86,8 +86,8 @@ WSGI_APPLICATION = 'tansacs.wsgi.application'
 DATABASES = {
    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
+        'NAME': 'tansacs',
+        'USER': 'tansacs',
         'PASSWORD': 'tansacs',
         'HOST': 'localhost',          # If PostgreSQL is running on localhost
         'PORT': '5432', 
