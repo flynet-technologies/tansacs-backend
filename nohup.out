@@ -1,0 +1,45 @@
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+December 07, 2023 - 15:18:49
+Django version 4.2.7, using settings 'tansacs.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+[07/Dec/2023 15:19:10] code 400, message Bad request version ('W]2\x04Eæ¡/£¶')
+[07/Dec/2023 15:19:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:10] code 400, message Bad request version ('\x1b=ÄïÔt4\x97Z:\x00ð\x86\x04ä\x99áÆ@p\x81}»×õ\x93N\x18\x98&+)°l\x9aÃHØÏ¡gd¶l*¦æ]#\x7fÆ?')
+[07/Dec/2023 15:19:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:10] code 400, message Bad request version ('\x02h2\x08http/1.1\x00-\x00\x02\x01\x01\x00')
+[07/Dec/2023 15:19:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:10] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00#\x00\x00\x00+\x00\x07\x06**\x03\x04\x03\x03\x00-\x00\x02\x01\x01\x00')
+[07/Dec/2023 15:19:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:15] code 400, message Bad request version ('B´ªjâà¸Ò\x95n\x91ÆÇç\x9b\x99)\x84.<OY\x8cay}Ué\x19\x11Ci\x00')
+[07/Dec/2023 15:19:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:15] code 400, message Bad request version ('zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01ä**\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x003\x00+\x00)')
+[07/Dec/2023 15:19:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:15] code 400, message Bad request version ('\x03')
+[07/Dec/2023 15:19:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:15] code 400, message Bad request version ('q¯ÖgÞÓÊú#\x02Ã>d\x97Ú\x9eã\x9d.\x8faúÕAAêT»\x11p\x13eÅÀ')
+[07/Dec/2023 15:19:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:15] code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01¤')
+[07/Dec/2023 15:19:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:15] code 400, message Bad request version ('JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01Ä::\x00\x00\x00+\x00\x07\x06jj\x03\x04\x03\x03\x00')
+[07/Dec/2023 15:19:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:19] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x11\x01\x00\x02')
+[07/Dec/2023 15:19:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:19] code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ºº\x00\x00\x00\x1b\x00\x03\x02\x00\x02ÿ\x01\x00\x01\x00Di\x00\x05\x00\x03\x02h2\x00#\x00\x00\x00')
+[07/Dec/2023 15:19:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:19] code 400, message Bad request version ('º\x86Ì®Rbúöÿ+ð\x8f¹.@\x05øy\x00°Í@')
+[07/Dec/2023 15:19:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:19] code 400, message Bad request version ('±6Êí>KÛ\x02(\x8fÌ\x12\x98\x00\x98F\x80?(Äü±ÆðI"\x8b®\x05ÄA\x01\x00Ð+\x80')
+[07/Dec/2023 15:19:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:19] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03')
+[07/Dec/2023 15:19:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:19] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00+\x00\x07\x06ZZ\x03\x04\x03\x03\x00\x1b\x00\x03\x02\x00\x02\x003\x00+\x00)')
+[07/Dec/2023 15:19:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+[07/Dec/2023 15:19:26] "GET /admin/ HTTP/1.1" 302 0
+[07/Dec/2023 15:19:27] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 6435
+Not Found: /favicon.ico
+[07/Dec/2023 15:19:27] "GET /favicon.ico HTTP/1.1" 404 4324

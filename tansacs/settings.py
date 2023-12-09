@@ -20,12 +20,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%q((%bdrf(1&by!(o91*2p1xa!md-8cleh&f@*5l7%##68f&=!'
+# SECRET_KEY = 'django-insecure-%q((%bdrf(1&by!(o91*2p1xa!md-8cleh&f@*5l7%##68f&=!'
+
+try:
+    SECRET_KEY = os.environ["SECRET_KEY"]
+except KeyError as e:
+    raise RuntimeError("Could not find a SECRET_KEY in environment") from e
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".flynet.systems","15.206.168.238","localhost"]
 
 
 # Application definition
@@ -43,18 +48,19 @@ INSTALLED_APPS = [
     'user',
     'jobs',
     'superadmin',
+    'tansacs'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-     'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
+#    'csp.middleware.CSPMiddleware'
 ]
 
 ROOT_URLCONF = 'tansacs.urls'
@@ -82,16 +88,15 @@ WSGI_APPLICATION = 'tansacs.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-
 DATABASES = {
-   'default': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tansacs',
-        'USER': 'tansacs',
+        'NAME': 'postgres',
+        'USER': 'postgres',
         'PASSWORD': 'tansacs',
         'HOST': 'localhost',          # If PostgreSQL is running on localhost
-        'PORT': '5432', 
-   }
+        'PORT': '5432',
+    }
 }
 
 
@@ -137,7 +142,6 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-
 AWS_ACCESS_KEY_ID = 'AKIARX56MWFDJPTMTRPZ'
 AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'tansac-s3'
@@ -158,21 +162,30 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587  # The default port is often 587 or 25
 EMAIL_USE_TLS = True  # Use TLS encryption
-EMAIL_HOST_USER = 'ssnazarenesrs@gmail.com'
-EMAIL_HOST_PASSWORD = 'lcjcsgffunxbzkhr'
+EMAIL_HOST_USER = 'info@tansacsrecruitment.in'
+EMAIL_HOST_PASSWORD = 'fmqowydftwzvqusy'
 
 
 CORS_ALLOW_ALL_ORIGINS = True
 
 
 CORS_ALLOWED_ORIGINS = [
-   "http://localhost:3000",
-   "http://127.0.0.1:9000"
+    "http://localhost:3000",
+    "http://127.0.0.1:9000",
+    "https://flynet.systems",
+    "https://tansacsrecruitment.in"
 ]
 
 
 REST_FRAMEWORK = {
-   'DEFAULT_AUTHENTICATION_CLASSES': [
-       'rest_framework.authentication.TokenAuthentication',
-   ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
 }
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+SECURE_HSTS_SECONDS = 2_592_000  # Unit is seconds; *USE A SMALL VALUE FOR TESTING!*
+SECURE_HSTS_PRELOAD = True
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+CSRF_TRUSTED_ORIGINS = ['https://flynet.systems','https://www.flynet.systems']
